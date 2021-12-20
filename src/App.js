@@ -1,14 +1,16 @@
 import "./App.css";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import A from "./components/A";
 import B from "./components/B";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Route exact path="/" component={A} />
-      <Route exact path="/b" component={B} />
-    </BrowserRouter>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<A />} />
+        <Route exact path="/b" element={<B />} />
+      </Routes>
+    </Router>
   );
 }
 
