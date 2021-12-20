@@ -30,6 +30,8 @@ jobs:
 
       - run: yarn build
 
+      - run: apt-get install awscli
+
       - aws-s3/sync:
           from: build
           to: "s3://learnci/"
