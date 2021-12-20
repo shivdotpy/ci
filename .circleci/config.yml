@@ -32,9 +32,9 @@ jobs:
 
       - run: curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 
-      - run: unzip awscliv2.zip
+      - run: sudo unzip awscliv2.zip
 
-      - run: ./aws/install
+      - run: sudo ./aws/install
 
       - aws-s3/sync:
           from: build
