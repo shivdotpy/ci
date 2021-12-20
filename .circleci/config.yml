@@ -30,7 +30,7 @@ jobs:
 
       - run: yarn build
 
-      - run: apt-get install awscli
+      - run: pip install awscli
 
       - aws-s3/sync:
           from: build
