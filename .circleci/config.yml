@@ -30,7 +30,7 @@ jobs:
 
       - run: yarn build
 
-      - run: pip install awscli
+      - run: npm i aws-cli
 
       - aws-s3/sync:
           from: build
